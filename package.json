@@ -1,0 +1,40 @@
+{
+  "name": "react-hands",
+  "version": "1.0.0",
+  "description": "React's Own Hands Touching State The Easiest Way!",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "test",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javaScriptKampala/react-hands.git"
+  },
+  "keywords": [
+    "React",
+    "State",
+    "Management",
+    "Redux",
+    "useContext",
+    "useReducer",
+    "hooks",
+    "hands",
+    "Kizz",
+    "kampala"
+  ],
+  "author": "Hussein Kizz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/javaScriptKampala/react-hands/issues"
+  },
+  "homepage": "https://github.com/javaScriptKampala/react-hands#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.31",
+    "@types/react-dom": "^18.0.11",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.2"
+  }
+}
