@@ -29,7 +29,9 @@ yarn add react-hands
 
 React Hands is so easy to use, you can play with it here to see for yourself or follow the step by step instructions below:
 
-[👍 Try It](https://stackblitz.com/edit/vitejs-vite-zrvz8l?embed=1&file=src/App.jsx&theme=dark&view=preview)
+[👍 Try It Live](https://stackblitz.com/edit/vitejs-vite-zrvz8l?embed=1&file=src/components/Counter.jsx)
+
+[👉 Example Github Repo](https://github.com/Hussseinkizz/react-hands-example)
 
 ### Creating the Store
 
