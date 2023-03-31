@@ -1,4 +1,4 @@
-// React State
+// React Hands
 // All exportable tpypes have naming convention $typeName
 import * as React from 'react';
 
@@ -34,7 +34,7 @@ export function reactState(
     } else {
       // handle error then return state as is -- line 1.0
       console.log(
-        `React State: Your probably passed a different reference to dispatch, "${action.type}" should match the same state name referenced in state!`
+        `Bad Hands: Your probably passed a different reference to dispatch, "${action.type}" should match the same state name referenced in state!`
       );
       return state;
     }
@@ -94,7 +94,7 @@ export function reactState(
     // tell user to wrap their app in store provider
     if (context === undefined) {
       throw new Error(
-        'React State: Your top level component or app must be wrapped within the StoreProvider!'
+        'Bad Hands: Your top level component or app must be wrapped within the StoreProvider!'
       );
     }
 

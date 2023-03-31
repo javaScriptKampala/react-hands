@@ -1,6 +1,6 @@
 {
   "name": "react-hands",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React's Own Hands Touching State The Easiest Way!",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
