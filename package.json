@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "react-hands",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React's Own Hands Touching State The Easiest Way!",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -47,6 +47,9 @@
   },
   "homepage": "https://github.com/javaScriptKampala/react-hands#readme",
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",

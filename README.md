@@ -1,10 +1,19 @@
 # 🧤 React Hands
 
-> By Hussein Kizz, First Beta Release v1.0.0
+> By Hussein Kizz, First Beta Release v1.0.5
 
 React's Own Hands Touching State The Easiest Way!
 
 Unlike others, react hands focuses on easiness and takes a shorthand approach to managing state in your react applications by using react's built in hooks mainly useContext and useReducer which are pretty handy by the way, and also emphasize a single source of truth or global state philosophy to allow managing state at scale a breeze, though local state approach is also supported intuitively. And with that said, `react-hands` is a lightweight, simple and easiest to use state management library to help you manage your application's state without having to learn that much anything new, as the library provides a `StoreProvider` wrapper component and a `useStore` hook for accessing and updating the state just as you would almost do it with react itself, resulting into a simillar and easy to use state management pattern.
+
+## Key Features
+
+- 👐 Open Source
+- 🤏 Light Weight
+- 👌 As Easy As useState()
+- 👏 Typscript Support
+- 🙏 No Boilerplate
+- ✌️ Full Of Handies!
 
 ## Installation
 
@@ -17,6 +26,10 @@ yarn add react-hands
 ```
 
 ## Usage
+
+React Hands is so easy to use, you can play with it here to see for yourself or follow the step by step instructions below:
+
+[👍 Try It](https://stackblitz.com/edit/vitejs-vite-zrvz8l?embed=1&file=src/App.jsx&theme=dark&view=preview)
 
 ### Creating the Store
 

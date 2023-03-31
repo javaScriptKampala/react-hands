@@ -1,5 +1,6 @@
 // rollup.config.mjs (for index.js)
 import typescript from '@rollup/plugin-typescript';
+import babel from '@rollup/plugin-babel';
 
 export default {
   input: 'src/index.tsx',
@@ -9,5 +10,12 @@ export default {
     sourcemap: true,
   },
   external: ['react'],
-  plugins: [typescript()],
+  plugins: [
+    typescript(),
+    babel({
+      babelHelpers: 'bundled',
+      presets: ['@babel/preset-env'],
+      extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    }),
+  ],
 };
