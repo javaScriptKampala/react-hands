@@ -25,6 +25,8 @@ React's Own Hands Touching State The Easiest Way!
 - Done: Test package installation and usage locally before publishing to npm!
 - Done: published first beta version, via Js Kampala Open Source!
 
-## React Hands, 31-Mar-2023 (v1.0.1)
+## React Hands, 31-Mar-2023 (v1.0.4)
 
 - Fixing: NPM error on package install!
+- Boost: Migrate from tsc to rollup
+- Done: Configure And Setup Rollup Bundler

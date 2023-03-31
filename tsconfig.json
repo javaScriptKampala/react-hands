@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "module": "commonjs",
+    "module": "esnext",
     "esModuleInterop": true,
     "target": "es6",
     "lib": [
@@ -13,7 +13,8 @@
     "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "composite": true
   },
   "include": [
     "src/**/*"
@@ -21,5 +22,11 @@
   "exclude": [
     "node_modules",
     "**/*.test.ts"
+  ],
+  "plugins": [
+    {
+      "name": "typescript-transform-paths",
+      "tsconfig": "tsconfig.json"
+    }
   ]
 }

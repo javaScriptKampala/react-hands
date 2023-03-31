@@ -1,33 +1,28 @@
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
+'use strict';
+
+var React = require('react');
+
+function _interopNamespaceDefault(e) {
+    var n = Object.create(null);
+    if (e) {
+        Object.keys(e).forEach(function (k) {
+            if (k !== 'default') {
+                var d = Object.getOwnPropertyDescriptor(e, k);
+                Object.defineProperty(n, k, d.get ? d : {
+                    enumerable: true,
+                    get: function () { return e[k]; }
+                });
+            }
+        });
     }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.reactState = void 0;
-// React State
-// All exportable tpypes have naming convention $typeName
-const React = __importStar(require("react"));
-const { createContext, useContext, useReducer, useMemo, useCallback } = React;
+    n.default = e;
+    return Object.freeze(n);
+}
+
+var React__namespace = /*#__PURE__*/_interopNamespaceDefault(React);
+
+// React Hands
+const { createContext, useContext, useReducer, useMemo, useCallback } = React__namespace;
 const StoreContext = createContext(undefined);
 function reactState(initialState = {}, actions = {}, middlewares = []) {
     function reducer(state, action) {
@@ -37,7 +32,7 @@ function reactState(initialState = {}, actions = {}, middlewares = []) {
         }
         else {
             // handle error then return state as is -- line 1.0
-            console.log(`React State: Your probably passed a different reference to dispatch, "${action.type}" should match the same state name referenced in state!`);
+            console.log(`Bad Hands: Your probably passed a different reference to dispatch, "${action.type}" should match the same state name referenced in state!`);
             return state;
         }
     }
@@ -66,18 +61,19 @@ function reactState(initialState = {}, actions = {}, middlewares = []) {
             dispatch,
         });
         const memorizedValue = useMemo(() => ({ state, dispatch: enhancedDispatch }), [state]);
-        return (React.createElement(StoreContext.Provider, { value: memorizedValue }, children));
+        return (React__namespace.createElement(StoreContext.Provider, { value: memorizedValue }, children));
     };
     function useStore() {
         const context = useContext(StoreContext);
         // tell user to wrap their app in store provider
         if (context === undefined) {
-            throw new Error('React State: Your top level component or app must be wrapped within the StoreProvider!');
+            throw new Error('Bad Hands: Your top level component or app must be wrapped within the StoreProvider!');
         }
         const { state, dispatch } = context;
         return [state, dispatch];
     }
     return { StoreProvider, useStore };
 }
+
 exports.reactState = reactState;
 //# sourceMappingURL=index.js.map

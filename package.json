@@ -1,19 +1,28 @@
 {
+  "type": "module",
   "name": "react-hands",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "React's Own Hands Touching State The Easiest Way!",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "**"
+  ],
   "exports": {
+    "./package.json": "./package.json",
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/src/index.d.ts"
     }
   },
   "scripts": {
     "test": "test",
-    "build": "npx tsc"
+    "build-tsc": "npx tsc",
+    "build-js": "rollup -c rollup.config.mjs",
+    "build-mjs": "rollup -c rollup.config.mjs.js",
+    "build-all": "npm run build-js && npm run build-mjs"
   },
   "repository": {
     "type": "git",
@@ -38,9 +47,15 @@
   },
   "homepage": "https://github.com/javaScriptKampala/react-hands#readme",
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.0.31",
     "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "rollup": "^3.20.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "tslib": "^2.5.0"
   }
 }
