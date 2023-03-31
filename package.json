@@ -1,10 +1,16 @@
 {
   "name": "react-hands",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React's Own Hands Touching State The Easiest Way!",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "test": "test",
     "build": "npx tsc"
