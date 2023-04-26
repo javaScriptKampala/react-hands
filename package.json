@@ -22,7 +22,8 @@
     "build-tsc": "npx tsc",
     "build-js": "rollup -c rollup.config.mjs",
     "build-mjs": "rollup -c rollup.config.mjs.js",
-    "build-all": "npm run build-js && npm run build-mjs"
+    "build-all": "npm run build-js && npm run build-mjs",
+    "postinstall": "npm run build-all"
   },
   "repository": {
     "type": "git",
