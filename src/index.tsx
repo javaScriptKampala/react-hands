@@ -1,5 +1,5 @@
 // React Hands
-// All exportable tpypes have naming convention $typeName
+// All exportable types have naming convention $TypeName
 import * as React from 'react';
 
 const { createContext, useContext, useReducer, useMemo, useCallback } = React;
